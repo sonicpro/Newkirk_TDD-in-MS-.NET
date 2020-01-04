@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Newkirk_TDD in MS .NET")]
+[assembly: AssemblyTitle("Chapter2")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("Newkirk_TDD in MS .NET")]
+[assembly: AssemblyProduct("Chapter2")]
 [assembly: AssemblyCopyright("Copyright ©  2020")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("530af61f-76e3-45fa-9222-5723742337ff")]
+[assembly: Guid("2e6abcb0-2499-47a9-a044-d6e6b50fbf02")]
 
 // Version information for an assembly consists of the following four values:
 //
