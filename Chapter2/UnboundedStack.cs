@@ -31,7 +31,14 @@ namespace Chapter2
 
         public object Peek()
         {
-            return items[items.Count - 1];
+            if (!IsEmpty)
+            {
+                return items[items.Count - 1];
+            }
+            else
+            {
+                throw new InvalidOperationException();
+            }
         }
     }
 }

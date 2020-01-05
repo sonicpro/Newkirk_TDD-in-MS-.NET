@@ -85,5 +85,12 @@ namespace UnboundedStackTest
             var actual = (int)stack.Peek();
             Assert.AreEqual(item, actual, "The pushed item should be available through Peek()");
         }
+
+        [TestMethod]
+        [ExpectedException(typeof(InvalidOperationException), "Must throw InvalidOperationException if executing Peek() on empty stack")]
+        public void PeekEmptyStack()
+        {
+            stack.Peek();
+        }
     }
 }
