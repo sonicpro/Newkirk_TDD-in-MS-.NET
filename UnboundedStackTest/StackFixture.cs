@@ -92,5 +92,18 @@ namespace UnboundedStackTest
         {
             stack.Peek();
         }
+
+        [TestMethod]
+        public void PushMultiplePeekAndVerifyTheLastPushed()
+        {
+            var firstItem = 1234;
+            stack.Push(firstItem);
+            var secondItem = 2345;
+            stack.Push(secondItem);
+            var thirdItem = 3456;
+            stack.Push(thirdItem);
+            var actual = (int)stack.Peek();
+            Assert.AreEqual(thirdItem, actual, "Peek() must return the last pushed item");
+        }
     }
 }
