@@ -105,5 +105,41 @@ namespace UnboundedStackTest
             var actual = (int)stack.Peek();
             Assert.AreEqual(thirdItem, actual, "Peek() must return the last pushed item");
         }
+
+        [TestMethod]
+        public void PushPeekNoStackStateChange()
+        {
+            var item = 44;
+            stack.Push(item);
+            object top = null;
+            for (int i = 0; i != 10; i++)
+            {
+                top = (int)stack.Peek();
+                Assert.AreEqual(item, top);
+            }
+        }
+
+        [TestMethod]
+        public void PushNull()
+        {
+            stack.Push(null);
+            Assert.IsFalse(stack.IsEmpty);
+        }
+
+        [TestMethod]
+        public void PushNullPopCheckContent()
+        {
+            stack.Push(null);
+            var item = stack.Pop();
+            Assert.IsNull(item, "Nulls must be stored explicitly in the stack");
+        }
+
+        [TestMethod]
+        public void PushNullPeekContentCheck()
+        {
+            stack.Push(null);
+            var item = stack.Peek();
+            Assert.IsNull(item, "Peek() must make it possible to peek null values");
+        }
     }
 }

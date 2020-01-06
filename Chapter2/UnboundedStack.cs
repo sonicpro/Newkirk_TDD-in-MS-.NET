@@ -16,17 +16,9 @@ namespace Chapter2
 
         public object Pop()
         {
-            if (!IsEmpty)
-            {
-                var topIndex = items.Count - 1;
-                var top = items[topIndex];
-                items.RemoveAt(topIndex);
-                return top;
-            }
-            else
-            {
-                throw new InvalidOperationException();
-            }
+            var top = Peek();
+            items.RemoveAt(items.Count - 1);
+            return top;
         }
 
         public object Peek()
@@ -37,7 +29,7 @@ namespace Chapter2
             }
             else
             {
-                throw new InvalidOperationException();
+                throw new InvalidOperationException("Stack is Empty");
             }
         }
     }
